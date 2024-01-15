@@ -28,7 +28,7 @@ func helper(l, r int, piles []int, h int) int {
         }
     } else {
         if r - l == 1 {
-            return min(math.Min(mid, helper(r, r, piles, h)))
+            return min(mid, helper(r, r, piles, h))
         }
         if r == l {
             return mid
