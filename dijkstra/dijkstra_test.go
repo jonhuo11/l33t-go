@@ -2,7 +2,6 @@ package dijkstra
 
 import (
 	"errors"
-	"fmt"
 	"math"
 	"strconv"
 	"strings"
@@ -12,7 +11,7 @@ import (
 func stringToEdgeWeightMatrix(s string) ([][]int, error) {
 	subs := strings.Split(s, "\n")
 	n, _ := strconv.Atoi(subs[0])
-	fmt.Println(n)
+	//fmt.Println(n)
 	edges := make([][]int, n)
 	for i := range edges {
 		edges[i] = make([]int, n)
@@ -52,7 +51,7 @@ func TestEdgeMatrixFromString(t *testing.T) {
 	if err != nil {
 		t.Fatalf(err.Error())
 	}
-	fmt.Println(edges)
+	//fmt.Println(edges)
 
 	if len(edges) != 5 {
 		t.Fatalf("not size 5")
@@ -92,6 +91,25 @@ func TestDijkstra(t *testing.T) {
 	}
 	o := dijkstra(5, e, 0, 4)
 	if o != 5 {
-		t.Fatalf("bad result")
+		t.Fatalf("bad result, expected 5")
+	}
+
+	s = `8
+0 1 0
+1 2 24
+1 4 20
+1 3 3
+3 4 12
+1 5 1
+5 6 1
+6 7 1
+7 4 1`
+	e, err = stringToEdgeWeightMatrix(s)
+	if err != nil {
+		t.Fatalf(err.Error())
+	}
+	o = dijkstra(8, e, 0, 4)
+	if o != 4 {
+		t.Fatalf("bad result, expected 4 got %v", o)
 	}
 }

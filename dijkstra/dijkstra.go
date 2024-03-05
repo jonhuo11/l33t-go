@@ -1,6 +1,9 @@
 package dijkstra
 
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
 // no heap implementation for now
 func dijkstra(num_vertices int, edges [][]int, start_vertex int, end_vertex int) int {
@@ -54,9 +57,10 @@ func dijkstra(num_vertices int, edges [][]int, start_vertex int, end_vertex int)
 				continue
 			}
 
-			if d[v] > d[mindistvertex]+neighboredgeweight {
+			if d[v] > d[mindistvertex] + neighboredgeweight {
 				d[v] = d[mindistvertex] + neighboredgeweight
 				pi[v] = mindistvertex
+				fmt.Println(v, d[v])
 			}
 		}
 
