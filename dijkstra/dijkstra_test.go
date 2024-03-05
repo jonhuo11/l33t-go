@@ -21,7 +21,7 @@ func stringToEdgeWeightMatrix(s string) ([][]int, error) {
 		}
 	}
 
-	for i,s := range subs {
+	for i, s := range subs {
 		if i == 0 {
 			continue
 		}
@@ -36,7 +36,7 @@ func stringToEdgeWeightMatrix(s string) ([][]int, error) {
 		if err1 != nil || err2 != nil || err3 != nil {
 			return nil, errors.New("bad formatting")
 		}
-		if from < 0 || from >= n || to < 0 || to >= n || w < 0{
+		if from < 0 || from >= n || to < 0 || to >= n || w < 0 {
 			return nil, errors.New("invalid range of from to weight")
 		}
 		edges[from][to] = w
@@ -87,7 +87,9 @@ func TestDijkstra(t *testing.T) {
 2 3 1
 3 4 2`
 	e, err := stringToEdgeWeightMatrix(s)
-	if err != nil { t.Fatalf(err.Error()) }
+	if err != nil {
+		t.Fatalf(err.Error())
+	}
 	o := dijkstra(5, e, 0, 4)
 	if o != 5 {
 		t.Fatalf("bad result")

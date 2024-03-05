@@ -38,7 +38,7 @@ func dijkstra(num_vertices int, edges [][]int, start_vertex int, end_vertex int)
 	for len(unvisited) > 0 {
 		// find unvisited vertex with minimum distance
 		mindistvertex := -1
-		for k,_ := range unvisited {
+		for k := range unvisited {
 			if mindistvertex == -1 {
 				mindistvertex = k
 			} else {
@@ -54,7 +54,7 @@ func dijkstra(num_vertices int, edges [][]int, start_vertex int, end_vertex int)
 				continue
 			}
 
-			if d[v] > d[mindistvertex] + neighboredgeweight {
+			if d[v] > d[mindistvertex]+neighboredgeweight {
 				d[v] = d[mindistvertex] + neighboredgeweight
 				pi[v] = mindistvertex
 			}
