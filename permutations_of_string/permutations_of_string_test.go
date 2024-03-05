@@ -1,4 +1,4 @@
-package misc
+package permutationsofstring
 
 import (
 	"testing"

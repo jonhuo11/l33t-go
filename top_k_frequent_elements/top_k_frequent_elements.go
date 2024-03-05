@@ -1,4 +1,4 @@
-package top_k_frequent_elements
+package topkfrequentelements
 
 import "slices"
 

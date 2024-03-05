@@ -1,4 +1,4 @@
-package product_of_array_except_self
+package productofarrayexceptself
 
 func productExceptSelf(nums []int) []int {
     // [ 1  2  6 24]

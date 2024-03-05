@@ -1,4 +1,4 @@
-package search_in_a_2d_matrix
+package searchina2dmatrix
 
 func searchInA2DMatrix(matrix [][]int, target int) bool {
 	l, r := 0, (len(matrix[0]) * len(matrix)) - 1

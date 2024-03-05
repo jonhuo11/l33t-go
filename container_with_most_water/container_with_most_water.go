@@ -1,4 +1,4 @@
-package container_with_most_water
+package containerwithmostwater
 
 func maxArea(height []int) int {
     l, r := 0, len(height) - 1

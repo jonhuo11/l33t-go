@@ -1,4 +1,4 @@
-package misc
+package permutationsofstring
 
 func permutationsOfString(s string) []string {
 	o := []string{}

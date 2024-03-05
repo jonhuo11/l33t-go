@@ -1,3 +1,3 @@
-module github.com/jonhuo11/l33t-go
+module github.com/jonhuo11/l33tgo
 
-go 1.21
+go 1.22.0

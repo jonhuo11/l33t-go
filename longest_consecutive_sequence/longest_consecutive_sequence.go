@@ -1,4 +1,4 @@
-package longest_consecutive_sequence
+package longestconsecutivesequence
 
 func longestConsecutive(nums []int) int {
     if len(nums) == 0 {

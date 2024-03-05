@@ -1,4 +1,4 @@
-package koko_eating_bananas
+package kokoeatingbananas
 
 import (
 	"math"

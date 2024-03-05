@@ -1,4 +1,4 @@
-package trapping_rain_water
+package trappingrainwater
 
 import "fmt"
 

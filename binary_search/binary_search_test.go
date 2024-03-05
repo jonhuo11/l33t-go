@@ -1,2 +1,2 @@
-package binary_search
+package binarysearch
 
